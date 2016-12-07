@@ -1,0 +1,26 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Checker\\": "src/"
+    }
+  },
+  "require": {
+    "guzzlehttp/guzzle": "6.2.0",
+    "swiftmailer/swiftmailer": "v5.4.1",
+    "incenteev/composer-parameter-handler": "v2.1.2",
+    "symfony/yaml": "v3.1.4"
+  },
+  "extra": {
+    "incenteev-parameters": {
+      "file": "config.yml"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+    ],
+    "post-update-cmd": [
+      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+    ]
+  }
+}
